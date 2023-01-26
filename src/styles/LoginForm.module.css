@@ -1,0 +1,78 @@
+.form_container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url("../assets/layered-waves-haikei.svg");
+    background-size: cover;
+
+    animation: wave 5s infinite alternate linear;
+
+    text-shadow: 0.1rem 0.1rem 2px rgba(0, 0, 0, 0.521);
+
+    /* animation: wave 1s forwards ease-in-out infinite; */
+}
+.form {
+    width: clamp(10rem, 90%, 20rem);
+    height: auto;
+    margin-inline: auto;
+    margin-block: 2rem;
+    padding: 2rem;
+    background: #014263;
+    border-radius: 0.4rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    color: aliceblue;
+    font-weight: 500;
+}
+.form_input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form_input > input {
+    height: 1.5rem;
+    border-radius: 0.3rem;
+    background-color: rgba(118, 172, 190, 0.24);
+    border: 0.05rem solid rgba(238, 238, 238, 0.507);
+
+    padding: 0.2rem 0.5rem;
+    margin-block: 0.2rem;
+    transition: transform 200ms, border 100ms;
+
+    color: rgba(255, 255, 255, 0.664);
+    caret-color: azure;
+    font-size: 1rem;
+    text-shadow: 1px 1px 5px #002131;
+}
+.form_input > input:focus {
+    outline: none;
+    border: 0.15rem solid rgb(0, 119, 255);
+}
+
+.login_button {
+    width: fit-content;
+    padding: 0.5rem;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    border-radius: 0.2rem;
+    background-color: rgb(0, 119, 255);
+
+    font-weight: 600;
+    color: white;
+    text-shadow: 1px 1px 2px #014263;
+}
+
+@keyframes wave {
+    from {
+        background-position: 0%;
+    }
+    to {
+        background-position: 100%;
+    }
+}
